@@ -129,6 +129,7 @@ resource "aws_iam_role_policy" "valtix_controller_policy" {
           "route53:ChangeResourceRecordSets",
           "route53:ListResourceRecordSets",
           "route53:ListHostedZonesByName",
+          "servicequotas:GetServiceQuota",
           "ec2:*",
           "elasticloadbalancing:*",
           "apigateway:GET"
