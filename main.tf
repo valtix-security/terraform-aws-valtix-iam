@@ -106,7 +106,7 @@ resource "aws_iam_role" "valtix_controller_role" {
       "Effect": "Allow",
       "Condition": {
         "StringEquals": {
-          "sts:ExternalId": "valtix"
+          "sts:ExternalId": "${var.ExternalId}"
         }
       }
     }
