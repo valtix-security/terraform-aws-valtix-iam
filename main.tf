@@ -75,7 +75,7 @@ resource "aws_iam_instance_profile" "valtix_fw_role" {
 
 # create a role that will be used by valtix controller with permissions
 resource "aws_iam_role" "valtix_controller_role" {
-  name = "valtix-controller-role"
+  name = "valtixcontrollerrole"
 
   tags = {
     Name   = "valtix-controller-role"
