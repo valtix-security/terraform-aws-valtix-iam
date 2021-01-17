@@ -10,3 +10,7 @@ variable "ExternalId" {
   description = "this is the External ID shown on the Add AWS Account on Valtix UI"
   default = "valtix"
 }
+
+variable "region" {
+  description = "this is the aws region"
+}
