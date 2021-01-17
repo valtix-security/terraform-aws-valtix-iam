@@ -1,16 +1,6 @@
 #############################################
-# Create S3 bucket / IAM Roles / IAM Policies
+# Create IAM Roles / IAM Policies
 #############################################
-
-# create the S3 bucket for tech supports and PCAPs
-resource "aws_s3_bucket" "techsupport" {
-  bucket = format("valtix-%s-techsupport", replace(var.prefix, "_", "-"))
-  acl    = "private"
-  tags = {
-    Name   = "valtix-${var.prefix}-techsupport"
-    prefix = var.prefix
-  }
-}
 
 # create a role that will be used by valtix firewall with permissions to
 # write techsupport/pcap files to s3 buckets
