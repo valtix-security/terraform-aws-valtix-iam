@@ -43,7 +43,7 @@ resource "aws_iam_role_policy" "valtix_fw_policy" {
         "s3:ListBucket"
       ],
       "Effect": "Allow",
-      "Resource":"${aws_s3_bucket.techsupport.arn}/*"
+      "Resource":"arn:aws:s3:::*/*"
     },
     {
       "Action": [
