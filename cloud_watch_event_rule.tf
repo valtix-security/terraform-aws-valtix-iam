@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_event_rule" "cloudwatch_rule" {
-    name = "valtix-${var.prefix}-inventory-rule"
-    event_pattern = <<EOF
+  name          = "${var.prefix}-inventory-rule"
+  event_pattern = <<EOF
 {
     "source": [
         "aws.ec2",
@@ -16,7 +16,7 @@ EOF
 }
 
 resource "aws_cloudwatch_event_target" "controller_target" {
-    rule = aws_cloudwatch_event_rule.cloudwatch_rule.name
-    arn = "arn:aws:events:${var.region}:${var.controller_aws_account_number}:event-bus/default"
-    role_arn = aws_iam_role.valtix_cloudwatch_event_role.arn
+  rule     = aws_cloudwatch_event_rule.cloudwatch_rule.name
+  arn      = "arn:aws:events:${var.region}:${var.controller_aws_account_number}:event-bus/default"
+  role_arn = aws_iam_role.valtix_cloudwatch_event_role.arn
 }
