@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "valtix_s3_bucket" {
   bucket = var.s3_bucket
+  force_destroy = true
   acl    = "private"
 }
 
