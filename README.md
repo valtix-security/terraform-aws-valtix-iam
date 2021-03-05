@@ -1,4 +1,4 @@
-# terraform-aws-valtix-iam-discovery
+# terraform-aws-valtix-iam
 This module creates IAM roles required to deploy Valtix gateways
 
 ## Example Usage
