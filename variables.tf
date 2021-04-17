@@ -24,8 +24,8 @@ variable "deployment_name" {
   default     = "prod1"
 }
 
-variable "route53log_vpc_ids" {
+variable "log_vpc_id" {
   type        = list(string)
-  description = "List of VPC IDs to enable Route53 Query Logging for DNS Traffic visibility"
+  description = "List of VPC IDs to enable Route53 Query Logging and VPC flow logs for DNS and VPC Traffic visibility"
   default     = []
 }

@@ -4,7 +4,7 @@ resource "aws_route53_resolver_query_log_config" "valtix_route53_query_logging" 
 }
 
 resource "aws_route53_resolver_query_log_config_association" "valtix_route53_query_logging_vpc_assoc" {
-  count                        = length(var.route53log_vpc_ids)
+  count                        = length(var.log_vpc_id)
   resolver_query_log_config_id = aws_route53_resolver_query_log_config.valtix_route53_query_logging.id
-  resource_id                  = var.route53log_vpc_ids[count.index]
+  resource_id                  = var.log_vpc_id[count.index]
 }
