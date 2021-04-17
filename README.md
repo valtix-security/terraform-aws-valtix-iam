@@ -11,6 +11,7 @@ module "iam" {
   region                        = "us-east-1"
   s3_bucket                     = "valtix-customer-s3"
   deployment_name               = "customer"
+  route53log_vpc_ids            = ["vpc-0846a3bba3772d1bb","vpc-09bcbaf2f25bf6926"]
 }
 ```
 
@@ -24,3 +25,4 @@ The following arguments are supported:
 * `region` - (Required) AWS region to create S3 bucket
 * `s3_bucket` - (Required) S3 bucket name for VPC flow logs and DNS query logs for Valtix Discovery
 * `deployment_name` - (Required) Account name provided by Valtix
+* `route53log_vpc_ids` - (Optional) List of VPC IDs to associate with Route53 query logging for DNS traffic visibilitiy
