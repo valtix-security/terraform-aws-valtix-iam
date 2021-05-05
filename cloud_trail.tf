@@ -13,5 +13,4 @@ resource "aws_cloudtrail" "valti_cloudtrail" {
     Name   = "${var.prefix}-cloudtrail"
     prefix = var.prefix
   }
-
 }
