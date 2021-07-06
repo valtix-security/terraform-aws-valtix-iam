@@ -23,3 +23,8 @@ variable "deployment_name" {
   description = "Valtix Controller deployment name"
   default     = "prod1"
 }
+
+variable "discovery_only" {
+  description = "Enable discovery only mode"
+  default     = false
+}

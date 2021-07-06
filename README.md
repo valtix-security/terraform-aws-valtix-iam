@@ -11,6 +11,7 @@ module "iam" {
   region                        = "us-east-1"
   s3_bucket                     = "valtix-customer-s3"
   deployment_name               = "customer"
+  #discovery_only		= true
 }
 ```
 
@@ -24,3 +25,10 @@ The following arguments are supported:
 * `region` - (Required) AWS region to create S3 bucket
 * `s3_bucket` - (Required) S3 bucket name for VPC flow logs and DNS query logs for Valtix Discovery
 * `deployment_name` - (Required) Account name provided by Valtix
+
+### Optional
+* `discovery_only` - (Optional) deploy iam roles for discovery only.
+
+### Output
+* `valtix_controller_role_arn` - IAM role for controller in ARN format
+* `valtix_firewall_role_name` - IAM role for Valtix Gateway in ARN format
